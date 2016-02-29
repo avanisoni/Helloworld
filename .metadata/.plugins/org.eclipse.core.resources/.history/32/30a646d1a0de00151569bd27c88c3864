@@ -1,8 +1,5 @@
 package com.kuali.codingchallenge;
 
-import java.util.LinkedList;
-import java.util.List;
-
 public class Elevator implements Runnable{
 	
 	
@@ -14,8 +11,6 @@ public class Elevator implements Runnable{
 	
 	public static int currentFloor;
 	private Floor destinationFloor;
-	
-	public List<Floor> destinationFloorList = new LinkedList<Floor>();
 	
 	int topFloor;
 	
@@ -77,18 +72,18 @@ public class Elevator implements Runnable{
 					openDoor();
 					
 					closeDoor();
-					//removeCurrentFloorfromDestinationFloorList();
 					}
 					
 					else {
 					//decide whether to move up or down and call moveUp or moveDown
-						if(destinationFloor.getFloorNumber() > currentFloor) {
+						if(destinationFloor.getFloorNumber() > currentFLoor) {
 						moveUp();
 						}
 						if(destinationFloor.getFloorNumber()<currentFloor){
 						moveDown();
 						}
-					}		
+					}
+					
 			
 		}
 	
@@ -97,7 +92,7 @@ public class Elevator implements Runnable{
 	
 	public boolean isArrivedDestination()
 	{
-		if(currentFloor == destinationFloor.getFloorNumber()){
+		if(currentFloor == destinationFloor){
 			return true;
 		}
 		else{
@@ -105,8 +100,10 @@ public class Elevator implements Runnable{
 		}
 			
 	}
-	public void addDestination(int destinationFloorNumber) {
-		destinationFloorList.add(new Floor(destinationFloorNumber));
+	public void addDestination(String destinationFloorNumber) {
+		
+		destinationFloor.setFloorNumber(destinationFloorNumber);
+		
 	}
 	
 	

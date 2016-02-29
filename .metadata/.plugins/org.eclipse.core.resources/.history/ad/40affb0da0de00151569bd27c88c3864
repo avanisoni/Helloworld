@@ -1,8 +1,5 @@
 package com.kuali.codingchallenge;
 
-import java.util.LinkedList;
-import java.util.List;
-
 public class Elevator implements Runnable{
 	
 	
@@ -13,18 +10,6 @@ public class Elevator implements Runnable{
 	public static int numberOfFloorsPassed=0;
 	
 	public static int currentFloor;
-	private Floor destinationFloor;
-	
-	public List<Floor> destinationFloorList = new LinkedList<Floor>();
-	
-	int topFloor;
-	
-	String elevatorId;
-	
-	public Elevator(String elevatorId, int topFloor){
-		this.elevatorId = elevatorId;
-		this.topFloor = topFloor;
-	}
 	
 	public String openDoor(){
 		return "Door Open";
@@ -45,21 +30,11 @@ public class Elevator implements Runnable{
 		
 	}
 	
-	public void reportFloorNumber(int currentFloor){
-		
-	}
 	public void moveUp(){
-		if(currentFloor != topFloor){
-			currentFloor++;
-			reportFloorNumber(currentFloor);
-		}
+		
 	}
 	
 	public void moveDown(){
-		if(currentFloor!= 1){
-			currentFloor--;
-			reportFloorNumber(currentFloor);
-		}
 		
 	}
 	
@@ -73,31 +48,32 @@ public class Elevator implements Runnable{
 			//check elevator state
 			//Condition: 
 			//Not in maintenance mode && not moving && destination floor is set &&
-					if(isArrivedDestination()){
+					if(isArrived()){
 					openDoor();
 					
 					closeDoor();
-					//removeCurrentFloorfromDestinationFloorList();
 					}
 					
-					else {
+					else 
 					//decide whether to move up or down and call moveUp or moveDown
-						if(destinationFloor.getFloorNumber() > currentFloor) {
+						if(destionationFloor > currentFLoor) {
 						moveUp();
 						}
-						if(destinationFloor.getFloorNumber()<currentFloor){
+						if(destinationFloor<currentFloor){
 						moveDown();
 						}
-					}		
+					
+			
+			
 			
 		}
 	
 		
 	}
 	
-	public boolean isArrivedDestination()
+	public boolean isArrived()
 	{
-		if(currentFloor == destinationFloor.getFloorNumber()){
+		if(currentFloor == destinationFloor){
 			return true;
 		}
 		else{
@@ -105,8 +81,9 @@ public class Elevator implements Runnable{
 		}
 			
 	}
-	public void addDestination(int destinationFloorNumber) {
-		destinationFloorList.add(new Floor(destinationFloorNumber));
+	public void addDestination() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

@@ -17,12 +17,6 @@ public class Floor {
 		controller.goDown(this.floorNumber);
 	}
 	
-	public int getFloorNumber() {
-		return floorNumber;
-	}
-	public void setFloorNumber(int floorNumber) {
-		this.floorNumber = floorNumber;
-	}
 	public void setController(ElevatorController controller){
 		this.controller = controller;
 	}

@@ -1,0 +1,70 @@
+package com.kuali.codingchallenge;
+
+public class Elevator implements Runnable{
+	
+	
+	public static boolean isOccupied;
+	
+	public static int noOfTrips = 0;
+	
+	public static int numberOfFloorsPassed=0;
+	
+	public static int currentFloor;
+	
+	public String openDoor(){
+		return "Door Open";
+	}
+	public String closeDoor(){
+		return "Door Closing";
+	}
+	public String reportfloor(Floor floor){
+		return "";
+	}
+	public void countFloor(){
+		
+	}
+	public void countTrips(){
+		
+	}
+	public void answer(){
+		
+	}
+	
+	public void moveUp(){
+		
+	}
+	
+	public void moveDown(){
+		
+	}
+	
+	public boolean isArrived;
+	
+	
+	@Override
+	public void run() {
+		while(true){
+			
+			//check elevator state
+			//Condition: 
+			//Not in maintenance mode && not moving && destination floor is set 
+			//if currentFloor == destinationFLoor 
+			openDoor();
+			
+			//decide whether to move up or down and call moveUp or moveDown
+			
+			//
+			
+			//check if there are any destination floor set
+		}
+	
+		
+	}
+	public void addDestination() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+
+}
