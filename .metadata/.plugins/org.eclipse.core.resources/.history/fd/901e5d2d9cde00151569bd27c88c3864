@@ -28,16 +28,9 @@ public class Elevator implements Runnable{
 		
 	}
 	
-	public boolean isArrived;
-	
-	
 	@Override
 	public void run() {
 	
-		
-	}
-	public void addDestination() {
-		// TODO Auto-generated method stub
 		
 	}
 	

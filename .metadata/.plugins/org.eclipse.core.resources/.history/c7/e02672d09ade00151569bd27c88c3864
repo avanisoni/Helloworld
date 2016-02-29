@@ -9,12 +9,8 @@ public class Floor {
 	public Floor(int floorNumber){
 		this.floorNumber = floorNumber;
 	}
-	public void goUp(){
-		controller.goUp(this.floorNumber);
-	}
-	
-	public void goDown(){
-		controller.goDown(this.floorNumber);
+	public void pressButton(){
+		
 	}
 	
 	public void setController(ElevatorController controller){

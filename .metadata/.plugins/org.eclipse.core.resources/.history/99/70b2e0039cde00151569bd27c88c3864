@@ -20,7 +20,6 @@ public class ElevatorController {
 	}
 	public void goUp(int floorNumber) {
 		Elevator elevator = getElevator(floorNumber);
-		elevator.addDestination();
 		
 	}
 	private Elevator getElevator(int floorNumber) {
