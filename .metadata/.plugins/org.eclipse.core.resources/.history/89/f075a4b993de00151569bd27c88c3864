@@ -1,0 +1,14 @@
+package com.kuali.codingchallenge;
+
+public class Elevator {
+	public static boolean isOccupied;
+	public void reportOpen(){
+		
+	}
+	public void reportClose(){
+		
+	}
+	
+	
+
+}

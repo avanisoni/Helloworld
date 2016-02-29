@@ -1,0 +1,10 @@
+package com.kuali.codingchallenge;
+
+public class Floor {
+	
+	public static int floorNumber;
+	public void pressButton(){
+		
+	}
+
+}

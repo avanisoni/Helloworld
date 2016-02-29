@@ -1,0 +1,16 @@
+package com.kuali.codingchallenge;
+
+public class ElevatorSimulator {
+	public static int numberOfElevators;
+
+	public static int numberOfFloors;
+	
+	public static void main(String args[]){
+		//arg0 is number of elevators
+		numberOfElevators = Integer.valueOf(args[0]);
+		//arg1 is number of floors
+		numberOfFloors = Integer.valueOf(args[1]);
+	}
+	
+
+}

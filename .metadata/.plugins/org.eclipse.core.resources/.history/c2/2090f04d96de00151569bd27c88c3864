@@ -1,0 +1,12 @@
+package com.kuali.codingchallenge;
+
+public class ElevatorController {
+	
+	private List<Floor> floors;
+	private List<Elevator> elevators;
+	public ElevatorController(List<Floor> floors, List<Elevator> elevators){
+		this.floors = floors;
+		this.elevators = elevators;
+	}
+
+}
