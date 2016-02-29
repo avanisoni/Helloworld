@@ -1,10 +1,5 @@
 package com.kuali.codingchallenge;
 
-/**
- * 
- * @author avanisoni
- *
- */
 public class Floor {
 	
 	public int floorNumber;

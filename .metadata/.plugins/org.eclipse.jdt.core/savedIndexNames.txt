@@ -13,7 +13,6 @@ INDEX VERSION 1.126+/Users/avanisoni/Documents/avani/kuala/codingExercise/.metad
 4249315662.index
 3712507179.index
 1819685514.index
-3989945875.index
 3266567714.index
 3954040986.index
 156905802.index

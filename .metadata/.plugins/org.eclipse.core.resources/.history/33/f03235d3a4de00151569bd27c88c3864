@@ -5,18 +5,6 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-
-/**
- * - Design approach : 
- * I have taken elevator controller approach to solve this problem. 
-
- * There are challenges to keep shared state in controller and ensure that there are no synchronizaton issues with this approach.
-
- * I also believe that we could solve this problem using "Message Passing Approach using Akka framework" but I'm not well versed in using Akka framework so decided to go with shared state approach.
-
- * @author avanisoni
- *
- */
 public class ElevatorSimulator {
 	public static int numberOfElevators;
 
@@ -32,13 +20,11 @@ public class ElevatorSimulator {
 		numberOfFloors = Integer.valueOf(args[1]);
 		
 		
-		ExecutorService executorService = Executors.newFixedThreadPool(NUM_OF_THREADS);
+		ExecutorService executorService = Executors.newCachedThreadPool(NUM_OF_THREADS);
 		
 		List<Elevator> elevatorList = new LinkedList<Elevator>();
 		for(int i=0; i<numberOfElevators;i++){
-			Elevator elevator = new Elevator("Elevator"+i,TOP_FLOOR);
-			executorService.execute(elevator);
-			elevatorList.add(elevator);
+			elevatorList.add(new Elevator("Elevator"+i,TOP_FLOOR));
 		}
 		List<Floor> floorList =  new LinkedList<Floor>();
 		for(int i=1; i<=numberOfFloors;i++){

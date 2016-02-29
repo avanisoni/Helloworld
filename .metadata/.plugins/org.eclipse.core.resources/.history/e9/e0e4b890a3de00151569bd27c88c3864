@@ -3,12 +3,6 @@ package com.kuali.codingchallenge;
 import java.util.ArrayList;
 import java.util.List;
 
-
-/**
- * Controller which is responsible for maintaing shared state
- * @author avanisoni
- *
- */
 public class ElevatorController {
 	
 	private List<Floor> floors;
@@ -26,29 +20,11 @@ public class ElevatorController {
 	}
 	public void goUp(int floorNumber) {
 		Elevator elevator = getElevator(floorNumber);
-		elevator.addDestination(floorNumber);
+		elevator.addDestination();
 		
 	}
 	private Elevator getElevator(int floorNumber) {
 		// TODO Auto-generated method stub
-		//Check if destination floor is enroute occupied elevator 
-		 //then setdestination floor to the occupied elevator
-	
-		for(Elevator elevator : elevators){
-			if (elevator.getCurrentFloor()==floorNumber){
-				elevator.addDestination(floorNumber);
-			}else if(elevator.elevatorState.equals(ElevatorState.IN_MOTION)){
-				//if(currentFloor is in middle){
-				elevator.addDestination(floorNumber);
-			}else{
-				elevator.addDestination(floorNumber);
-				
-			}
-		}
-		
-
-		//else
-		//set Destination floor to empty Elevatr
 		return null;
 	}
 	public void goDown(int floorNumber) {

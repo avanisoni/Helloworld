@@ -3,12 +3,8 @@ package com.kuali.codingchallenge;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.text.html.HTMLDocument.Iterator;
 
-/**
- * Controller which is responsible for maintaing shared state
- * @author avanisoni
- *
- */
 public class ElevatorController {
 	
 	private List<Floor> floors;

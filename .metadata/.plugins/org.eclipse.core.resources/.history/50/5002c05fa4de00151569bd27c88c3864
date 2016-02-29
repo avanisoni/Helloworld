@@ -3,11 +3,6 @@ package com.kuali.codingchallenge;
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- * Maintains its own state and keeps the reference to @ElevatorController to notify its current state
- * @author avanisoni
- *
- */
 public class Elevator implements Runnable{
 	
 	
@@ -27,8 +22,6 @@ public class Elevator implements Runnable{
 	String elevatorId;
 	
 	public ElevatorState elevatorState;
-	
-	private ElevatorController elevatorController;
 	
 	public Elevator(String elevatorId, int topFloor){
 		this.elevatorId = elevatorId;
@@ -62,14 +55,14 @@ public class Elevator implements Runnable{
 	{
 		return this.currentFloor;
 	}
-	public synchronized void moveUp(){
+	public void moveUp(){
 		if(currentFloor != topFloor){
 			currentFloor++;
 			reportFloorNumber(currentFloor);
 		}
 	}
 	
-	public synchronized void moveDown(){
+	public void moveDown(){
 		if(currentFloor!= 1){
 			currentFloor--;
 			reportFloorNumber(currentFloor);
@@ -119,13 +112,10 @@ public class Elevator implements Runnable{
 		}
 			
 	}
-	public synchronized void addDestination(int destinationFloorNumber) {
+	public void addDestination(int destinationFloorNumber) {
 		destinationFloorList.add(new Floor(destinationFloorNumber));
 	}
 	
-	public void setElevatorController(ElevatorController controller){
-		this.elevatorController = controller;
-	}
 	
 
 }
